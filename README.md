@@ -1,8 +1,4 @@
-Here is a **professionally written `README.md`** for your **Typing Speed Test Application** built with **Python and Tkinter**:
-
----
-
-# ⌨️ Typing Speed Test - Python Tkinter GUI Application
+#  Typing Speed Test - Python Tkinter GUI Application
 
 ##  Project Overview
 

@@ -1,133 +1,144 @@
-#  Typing Speed Test - Python Tkinter GUI Application
+# ⌨️ TypeSpeed Pro — Typing Speed Test (Tkinter)
 
-##  Project Overview
-
-This **Typing Speed Test** is a Python GUI application built using **Tkinter** that allows users to test and improve their typing speed and accuracy. The app displays a randomly chosen text for the user to type and calculates typing metrics such as **Words Per Minute (WPM)**, **accuracy**, and **time taken**. Additionally, the application highlights typing errors and provides detailed feedback in a pop-up window.
-
----
-
-##  What I Learned From This Project
-
-### 1] GUI Design with Tkinter
-- Designing professional and responsive GUI layouts using `Frame`, `Label`, `Text`, `Button`, and `Toplevel` widgets.
-- Customizing widget fonts, colors, paddings, and layouts using `tkinter.font` and geometry managers.
-- Handling keyboard events (`<KeyPress>`) to trigger timers and capture user input dynamically.
-
-### 2] Timer & Real-Time Feedback
-- Implementing real-time timers using `time.time()` and `after()` loops to track typing duration.
-- Displaying **WPM** dynamically while typing.
-
-### 3] Typing Accuracy Evaluation
-- Comparing expected and typed text character-by-character and word-by-word.
-- Calculating **accuracy percentage** and identifying **extra/missing words** or incorrect characters.
-
-### 4] Error Analysis with `difflib`
-- Using Python’s `difflib.SequenceMatcher` to compare strings and highlight differences.
-- Building a clear and user-friendly error display with bold highlights for mistakes using `Text` widget formatting.
-
-### 5] Modular Python Coding
-- Separating logic into multiple files for clean and maintainable structure:
-  - `main.py`: Application logic and GUI
-  - `utils.py`: Random sentence generator
-  - `error_utils.py`: Typing error detection and formatting
+TypeSpeed Pro is a modern and responsive **typing speed test desktop application** built using **Python and Tkinter**.  
+It allows users to measure their **Words Per Minute (WPM), Accuracy, and Errors** in a clean and distraction-free interface.
 
 ---
 
-##  Features
+## 🚀 Features
 
-- 1. Clean and user-friendly GUI using Tkinter
-- 2. Real-time typing timer with live WPM calculation
-- 3. Accuracy calculation and performance summary
-- 4. Intelligent error analysis (incorrect characters, extra/missing words)
-- 5. Pop-up error report with highlighted mistakes
-- 6. "New Test" button for multiple attempts
-
----
-
-##  Technologies Used
-
-| Category       | Tools / Libraries          |
-|----------------|-----------------------------|
-| Language       | Python 3.x                  |
-| GUI Framework  | Tkinter                     |
-| Utility Module | `difflib`, `random`, `time` |
-| Fonts & Design | `tkinter.font`, `messagebox` |
+- ⏱️ Multiple test durations (30, 60, 120 seconds)
+- ⚡ Real-time WPM calculation
+- 🎯 Accuracy tracking
+- ❌ Detailed error tracking (expected vs typed)
+- 📊 Progress bar and timer
+- 🧾 Results summary popup
+- 📱 Responsive and modern UI
+- 🔁 Try Again option
+- 🖥️ Lightweight — no external dependencies
 
 ---
 
-##  How to Run the Project
+## 🛠️ Tech Stack
 
-###  Prerequisites
-- Python 3.x installed on your system
+- Python 3.x
+- Tkinter (GUI library)
+- ttk (Themed Tkinter widgets)
+- Standard Python libraries (random, time)
 
-###  File Structure
+---
+
+## 📂 Project Structure
+
 ```
-
-typing-speed-test/
+Type_Speed_Pro/
 │
-├── main.py                 # Main application logic and GUI
-├── utils.py                # Function to generate random texts
-├── error\_utils.py          # Error checking and display functions
-└── README.md               # Project documentation
-
-````
-
-###  Steps to Launch
-
-1. **Clone Or Download the Repository**
-  t
-
-2. **Run the Application**
-
-   ```bash
-   python main.py
-   ```
-
-3. **Using the App**
-
-   * Click in the text box to start typing.
-   * As you type, real-time stats (WPM, time) are shown.
-   * Click **"Done"** to finish typing and see results.
-   * Get detailed typing errors in a popup.
-   * Click **"New Test"** to try again with a different prompt.
-
----
-
-##  Example Output
-
-```
-Elapsed Time: 12.3s | WPM: 40
-Perfect! Time: 12.3s | WPM: 40 | Accuracy: 100.0%
-Press 'New Test' to try again!
-```
-
-#### Typing Errors Pop-up
-
-```
-Total Mistakes: 3
-
-Mistake at "programming" at character 5:
-Expected: prog**ram**ming
-Typed:    prog**lom**ming
-
-✱ Extra words added: and engaging
-✱ Missing words: your
+├── app.py
+├── venv/ (optional virtual environment)
+└── README.md
 ```
 
 ---
 
-##  Future Improvements
+## ⚙️ Requirements
 
-* [i]   Add audio feedback for typing speed
-* [ii]  Store typing history in a file or database
-* [iii] Add custom paragraph input for advanced tests
-* [iv]  Display charts of performance over time
+- Python 3.8 or higher
+- Tkinter (included with Python)
 
----
+Check Python version:
 
-## License
-
-This project is developed for educational purposes. Feel free to use and modify it as needed.
+```
+python --version
+```
 
 ---
 
+## ▶️ How to Run
+
+### Step 1: Open terminal in project folder
+
+```
+cd Type_Speed_Pro
+```
+
+### Step 2: Run the application
+
+```
+python app.py
+```
+
+OR
+
+```
+py app.py
+```
+
+---
+
+## 🧠 How It Works
+
+1. Select test duration (30 / 60 / 120 seconds)
+2. Start typing the displayed words
+3. The timer starts automatically when you begin typing
+4. App calculates:
+   - Words Per Minute (WPM)
+   - Accuracy (%)
+   - Errors
+5. Results are shown after test completion
+
+---
+
+## 📊 Metrics Explained
+
+**WPM (Words Per Minute)**  
+```
+WPM = (Correct Characters / 5) ÷ Time in Minutes
+```
+
+**Accuracy**
+```
+Accuracy = (Correct Characters / Total Typed Characters) × 100
+```
+
+---
+
+## 🎨 UI Features
+
+- Modern clean design
+- Responsive layout
+- Scrollable content
+- Error analysis panel
+- Progress tracking
+
+---
+
+## 🔮 Future Enhancements
+
+- User profiles
+- High score tracking
+- Difficulty levels
+- Dark mode
+- Sound feedback
+- Online leaderboard
+
+---
+
+## 👨‍💻 Developer
+
+**Maithilee Bhatkar**
+
+---
+
+## 📜 License
+
+MIT License — Free for personal and commercial use.
+
+---
+
+## ⭐ Support
+
+If you like this project:
+
+- Give it a ⭐ on GitHub
+- Share with others
+- Suggest improvements
